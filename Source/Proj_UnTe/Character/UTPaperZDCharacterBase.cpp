@@ -12,9 +12,9 @@
 AUTPaperZDCharacterBase::AUTPaperZDCharacterBase()
 {
 
-	bUseControllerRotationPitch = false;
+	bUseControllerRotationPitch = true;
 	bUseControllerRotationYaw = false;
-	bUseControllerRotationRoll = false;
+	bUseControllerRotationRoll = true;
 
 	//capsule
 	GetCapsuleComponent()->InitCapsuleSize(20.f, 20.f);
@@ -23,17 +23,19 @@ AUTPaperZDCharacterBase::AUTPaperZDCharacterBase()
 
 	// Movement
 
-	GetCharacterMovement()->bOrientRotationToMovement = false;
+	GetCharacterMovement()->bOrientRotationToMovement = true;
 	GetCharacterMovement()->MaxWalkSpeed = 80.f;
 	GetCharacterMovement()->BrakingDecelerationWalking = 2000.f;
-
-
+	GetCharacterMovement()->RotationRate = FRotator(0.0f, 360*60.0f, 0.0f);
 
 	//// sprite
 	GetSprite()->AddRelativeLocation(FVector(0.f, 0.f, -20.f));
 	GetSprite()->SetCastShadow( true);
 	GetSprite()->bCastDynamicShadow = true;
 	GetSprite()->bCastStaticShadow = true;
+
+	GetSprite()->SetUsingAbsoluteRotation(true);
+
 	//static ConstructorHelpers::FObjectFinder<UPaperFlipbook> FlipBookRef(TEXT("/Script/Paper2D.PaperFlipbook'/Game/UT_Assets/Player/CharaIdle.CharaIdle'"));
 	//if (FlipBookRef.Object)
 	//{

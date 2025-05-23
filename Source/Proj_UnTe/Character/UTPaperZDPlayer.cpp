@@ -17,6 +17,7 @@ AUTPaperZDPlayer::AUTPaperZDPlayer()
 	CameraBoom->bUsePawnControlRotation = false;
 	FRotator NewRotation = FRotator(-25.f, -90.0f, 0.0f); // Pitch, Yaw, Roll
 	CameraBoom->SetRelativeRotation(NewRotation);
+	CameraBoom->SetUsingAbsoluteRotation(true);
 
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
