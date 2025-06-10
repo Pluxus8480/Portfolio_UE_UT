@@ -26,7 +26,9 @@ AProj_UnTeGameMode::AProj_UnTeGameMode()
 
 
 	//static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/UT_Assets/Player/BP_Chara.BP_Chara_C"));
-	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Script/Proj_UnTe.UTPaperZDPlayer"));
+	//static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Script/Proj_UnTe.UTPaperZDPlayer"));
+	/*/Script/Engine.Blueprint'/Game/UT_Assets/Blueprint/BP_Player.BP_Player'*/
+	static ConstructorHelpers::FClassFinder<APawn> PlayerPawnBPClass(TEXT("/Game/UT_Assets/Blueprint/BP_Player"));
 	if (PlayerPawnBPClass.Class != nullptr)
 	{
 		DefaultPawnClass = PlayerPawnBPClass.Class;

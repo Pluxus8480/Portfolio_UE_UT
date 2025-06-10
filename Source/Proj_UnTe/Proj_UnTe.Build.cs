@@ -10,6 +10,6 @@ public class Proj_UnTe : ModuleRules
 
 		PublicIncludePaths.AddRange(new string[] { "Proj_UnTe" });
 
-        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "NavigationSystem", "AIModule", "Niagara", "EnhancedInput", "PaperZD" });
+        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "NavigationSystem", "AIModule", "Niagara", "EnhancedInput", "PaperZD","UMG", "SlateCore" });
     }
 }

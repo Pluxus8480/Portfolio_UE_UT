@@ -8,6 +8,7 @@
 #include "PaperZDAnimationComponent.h"
 #include "PaperZDAnimInstance.h"
 #include "PaperFlipbook.h"
+#include "Physics/UTCollision.h"
 
 AUTPaperZDCharacterBase::AUTPaperZDCharacterBase()
 {
@@ -18,8 +19,7 @@ AUTPaperZDCharacterBase::AUTPaperZDCharacterBase()
 
 	//capsule
 	GetCapsuleComponent()->InitCapsuleSize(20.f, 20.f);
-	GetCapsuleComponent()->SetCollisionProfileName(TEXT("Pawn"));
-
+	GetCapsuleComponent()->SetCollisionProfileName(CPROFILE_UTCAPSULE);
 
 	// Movement
 
